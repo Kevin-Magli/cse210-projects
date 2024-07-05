@@ -30,10 +30,14 @@ public class ReflectingActivity : Activity {
         DateTime startTime = DateTime.Now;
         DateTime stopTime = startTime.AddSeconds(_duration);
 
+        Console.Clear();
+        GetRandomPrompt();
+        DisplayPrompt();
+        Console.WriteLine("When you have something in mind, press enter to continue...");
+        Console.ReadLine();
+
         do {
-            Console.Clear();
-            GetRandomPrompt();
-            DisplayPrompt();
+            
             GetRandomQuestion();
             DisplayQuestion();
             ShowSpinner(10);
