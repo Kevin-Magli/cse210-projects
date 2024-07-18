@@ -5,7 +5,7 @@ public class SimpleGoal : Goal
     public SimpleGoal(string name, string description, int points, bool isCompleted) : base(name, description, points, isCompleted) { }
 
     public override int RecordEvent() {
-        
+
         if (!_isCompleted) {
             _isCompleted = true;
             return _points;
